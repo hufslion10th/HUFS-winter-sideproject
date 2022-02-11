@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 
+  <style>
+    body{
+      padding: 0px;
+      margin: 0px;
+    }
+
+    #content {
+      position: absolute;
+      height:500px;
+      width: 900px;
+      top: 40%;
+      left: 50%;
+      border: 1px solid #5D5D5D;
+      margin: -250px 0px 0px -450px;
+    }
+
+    #result {
+      position: absolute;
+      height:1000px;
+      width: 1000px;
+      top: 20%;
+      left: 50%;
+      border: 1px solid #5D5D5D;
+      margin: -250px 0px 0px -450px;
+    }
+  </style>
+
 </head>
 
 <body class="container">
@@ -14,46 +41,57 @@
     <h1 class="mt-5 text-center">나에게 잘 어울리는 코딩 언어는?</h1>
     <button type="button" class="btn btn-primary mt-5" onclick='start();'>테스트 시작하기</button>
   </article>
-  <article class="question">
+  
+  <article id="" class="question">
     <div class="progress mt-5">
-      <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+      <div class="progress-bar" role="progressbar" style="width: calc(100/9*1%)"></div>
     </div>
-    <h2 id="title" class="text-center mt-5">문제</h2>
+    <h2 id="title" class="text-center" style="margin-top: 200px;">문제</h2>
     <input id="type" type="hidden" value="EI">
     <button id="A" type="button" class="btn btn-primary mt-5">Primary</button>
     <button id="B" type="button" class="btn btn-primary mt-5">Primary</button>
   </article>
-  <article class="result">
-    <img class="rounded-circle mt-5" src="lion.jpg" alt="animal">
-    <h2 id="animal" class="text-center mt-5">동물이름11</h2>
+
+  
+  <article id = "result" class="result">
+    <img style="height: 200px" class="mt-5" src="lion.jpg" alt="programming_language">
+    <h2 id="programming_language" class="text-center mt-5">프로그래밍 언어</h2>
     <h3 id="explain" class="text-center mt-5">설명</h3>
   </article>
+    
+
   <input type="hidden" id="EI" value="0">
   <input type="hidden" id="SN" value="0">
-  <input type="hidden" id="TF" value="0">
   <input type="hidden" id="JP" value="0">
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  
   <script>
     var num = 1;
     var q = {
-      1: {"title": "문제 1번", "type":"EI", "A":"E","B":"I"},
-      2: {"title": "문제 2번", "type":"EI", "A":"E","B":"I"},
-      3: {"title": "문제 3번", "type":"SN", "A":"E","B":"I"},
-      4: {"title": "문제 4번", "type":"SN", "A":"S","B":"N"},
-      5: {"title": "문제 5번", "type":"TF", "A":"S","B":"N"},
-      6: {"title": "문제 6번", "type":"TF", "A":"S","B":"N"},
-      7: {"title": "문제 7번", "type":"TF", "A":"T","B":"F"},
-      8: {"title": "문제 8번", "type":"TF", "A":"T","B":"F"},
-      9: {"title": "문제 9번", "type":"JP", "A":"T","B":"F"},
-      10: {"title": "문제 10번", "type":"JP", "A":"J","B":"P"},
-      11: {"title": "문제 11번", "type":"JP", "A":"J","B":"P"},
-      12: {"title": "문제 12번", "type":"JP", "A":"J","B":"P"},
+      /* E/I 질문 3개 */
+      1: {"title": "오늘 모처럼 쉬는날.... 뭐하지?", "type":"EI", "A":"집에 있으면 답답해~ 만날 사람을 찾아 떠난다.","B":"혼자만의 시간을 만끽한다."},
+      2: {"title": "아는 사람이 없는 교양에서 팀프로젝트. 조원 어떻게 구하지?", "type":"EI", "A":"적극적으로 조원을 찾아본다.","B":"교수님이 조 짜주시기만 기다린다."},
+      3: {"title": "동아리 MT 갔을때 나의 모습은?", "type":"EI", "A":"MT의 꽃 술게임!! 다 드루와~~","B":"시끄러운건 싫어! 방에 숨에있는다"},
+      /* S/N 질문 3개 */
+      4: {"title": "코딩의 신이 됐다.... 하고 싶은 것은?", "type":"SN", "A":"구글 입사하기","B":"구글 해킹하기"},
+      5: {"title": "크러쉬가 나한테 멍때리기 대회 참여할건지 물어본다면?", "type":"SN", "A":"뭐야 시간아까워. 참가하지 않는다.","B":"상금이 얼마지? 일단 참가!"},
+      6: {"title": "영화 내용을 소개해 달라고 한다면?", "type":"SN", "A":"영화 줄거리를 애기해준다.","B":"감독의 의도를 중심으로 설명한다."},
+      /* J/P 질문 3개 */
+      7: {"title": "온라인 강의가 올라왔을 때 나의 모습", "type":"JP", "A":"올라오자마자 듣는다.","B":"마감 당일까지 미뤄둔다."},
+      8: {"title": "개인 메일함 정리해?", "type":"JP", "A":"당연하지! 그걸 어떻게 두고 봐?","B":"엥 개인 메일함을 정리해?"},
+      9: {"title": "오늘은 레포트 제출 d-day. 내 모습은?", "type":"JP", "A":"다 했으니 유튜브 보고 쉬어야지ㅎㅎ","B":"유튜브 하나만 보고 해야지ㅎㅎ"},
     }
     var result = {
-      "ISTJ": {"animal": "하마", "explain": "하마 설명", "img":"lion.jpg"},
-      "ENFP": {"animal": "멋쟁이 사자", "explain": "멋쟁이 사자 설명", "img":"lion.jpg"},
-      "ENTJ": {"animal": "호랑이", "explain": "호랑이 설명", "img":"lion.jpg"},
+      "ESJ": {"programming_language": "JavaScript", "explain": "하마 설명", "img":"lion.jpg"},
+      "ESP": {"programming_language": "Python", "explain": "멋쟁이 사자 설명", "img":"lion.jpg"},
+      "ENJ": {"programming_language": "Java", "explain": "호랑이 설명", "img":"lion.jpg"},
+      "ENP": {"programming_language": "C#", "explain": "호랑이 설명", "img":"lion.jpg"},
+      "ISJ": {"programming_language": "Swift", "explain": "호랑이 설명", "img":"lion.jpg"},
+      "ISP": {"programming_language": "Go", "explain": "호랑이 설명", "img":"lion.jpg"},
+      "INJ": {"programming_language": "C++", "explain": "호랑이 설명", "img":"lion.jpg"},
+      "INP": {"programming_language": "PHP", "explain": "호랑이 설명", "img":"lion.jpg"},
     }
 
     function start() {
@@ -63,7 +101,7 @@
     }
 
     $("#A").click(function(){
-      var type = $("type").val();
+      var type = $("#type").val();
       var preValue = $("#"+type).val();
       $("#"+type).val(parseInt(preValue)+1);
       next();
@@ -74,20 +112,19 @@
     });
 
     function next(){
-      if (num==13){ //마지막 문제
+      if (num==10){ //마지막 문제
         $(".question").hide();
         $(".result").show();
         var mbti = "";
         ($("#EI").val() <2) ? mbti+="I" : mbti+="E";
         ($("#SN").val() <2) ? mbti+="N" : mbti+="S";
-        ($("#TF").val() <2) ? mbti+="F" : mbti+="T";
         ($("#JP").val() <2) ? mbti+="P" : mbti+="J";
         alert(mbti);
         $("#img").attr("src",result[mbti]["img"]);
-        $("#animal").html(result[mbti]["animal"]);
+        $("#programming_language").html(result[mbti]["programming_language"]);
         $("#explain").html(result[mbti]["explain"]);
       } else {
-        $(".progress-bar").attr('style','width: calc(100/12*'+num+'%)');
+        $(".progress-bar").attr('style','width: calc(100/9*'+num+'%)');
         $("#title").html(q[num]["title"]);
         $("#type").val(q[num]["type"]);
         $("#A").html(q[num]["A"]);
