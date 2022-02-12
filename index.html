@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>나에게 맞는 코딩 언어는?</title>
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 
   <style>
+    @font-face {
+    font-family: 'HSSaemaul-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
     body{
       padding: 0px;
       margin: 0px;
@@ -15,73 +22,108 @@
 
     #content {
       position: absolute;
-      height:500px;
-      width: 900px;
-      top: 40%;
+      top: 50%;
       left: 50%;
-      border: 1px solid #5D5D5D;
-      margin: -250px 0px 0px -450px;
+      width: 50rem;
+      height: 50rem;
+      margin: -25rem 0rem 0rem -25rem;
     }
 
-    #result {
-      position: absolute;
-      height:1000px;
-      width: 1000px;
-      top: 20%;
-      left: 50%;
-      border: 1px solid #5D5D5D;
-      margin: -250px 0px 0px -450px;
+    .btn:focus, .btn:active {
+      outline: none;
+      box-shadow: none;
+    }
+    .btn1 {
+      float: left;
+      cursor: pointer;
+      width: 15.51rem;
+      height: 4.96rem;
+      border-radius: 2.5rem;
+      background-color: transparent;
+    }
+    .btn2 {
+      float: left;
+      cursor: pointer;
+      width: 13.2rem;
+      height: 1.7rem;
+      background-color: transparent;
+    } 
+    .btn4 {
+      float: left;
+      width: 30rem;
+      height: 6rem;
+      margin-left: 10rem;
+      background-color: rgb(253,159,40);
+      box-shadow: 1px 1px 3px 1px rgb(216,124,9);
     }
   </style>
-
 </head>
+<body class="container" style="background-color:bisque;">
 
-<body class="container">
-  <article class="start">
-    <h1 class="mt-5 text-center">나에게 잘 어울리는 코딩 언어는?</h1>
-    <button type="button" class="btn btn-primary mt-5" onclick='start();'>테스트 시작하기</button>
+  <article id="content" style="background-image: url(static/img/firstview.png); background-size: 100%, 100%;" class="start">
+    <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 8.09rem;" onclick='start();'></button>
+    <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 26.37rem;"></button>
+    <button onclick="location.href='https://www.codelion.net/'" class="btn btn2" style="position: absolute; margin-top: 42.3rem; margin-left: 10.8rem;"></button>
   </article>
-  
-  <article id="" class="question">
-    <div class="progress mt-5">
+
+  <article id="content" style="background-image: url(static/img/background.png); background-size: 100%, 100%;" class="question">
+    <h2 id="title1" class="text-center" style="margin-top: 9rem; font-family: HSSaemaul-Regular; font-size:4rem; color: rgb(17,28,67);">Title1</h2>
+    <h2 id="title2" class="text-center" style="font-family: HSSaemaul-Regular; font-size:4rem; color: rgb(17,28,67);">Title2</h2>
+    <input id="type" type="hidden" value="EI">
+    
+    <button id="A" type="button" class="btn4 mt-5" style="">Primary</button>
+    <button id="B" type="button" class="btn4 mt-4">Primary</button>
+    
+    <div class="progress" style="margin-top: 5rem; margin-left: 10rem; width: 30rem; height: 2rem;">
       <div class="progress-bar" role="progressbar" style="width: calc(100/9*1%)"></div>
     </div>
-    <h2 id="title" class="text-center" style="margin-top: 200px;">문제</h2>
-    <input id="type" type="hidden" value="EI">
-    <button id="A" type="button" class="btn btn-primary mt-5">Primary</button>
-    <button id="B" type="button" class="btn btn-primary mt-5">Primary</button>
   </article>
 
-  
-  <article id = "result" class="result">
+  <article id="content" style="background-image: url(static/img/background.png); background-size: 100%, 100%;" class="result">
     <img style="height: 200px" class="mt-5" src="lion.jpg" alt="programming_language">
     <h2 id="programming_language" class="text-center mt-5">프로그래밍 언어</h2>
     <h3 id="explain" class="text-center mt-5">설명</h3>
   </article>
-    
-
+  
   <input type="hidden" id="EI" value="0">
   <input type="hidden" id="SN" value="0">
   <input type="hidden" id="JP" value="0">
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  
   <script>
     var num = 1;
     var q = {
       /* E/I 질문 3개 */
-      1: {"title": "오늘 모처럼 쉬는날.... 뭐하지?", "type":"EI", "A":"집에 있으면 답답해~ 만날 사람을 찾아 떠난다.","B":"혼자만의 시간을 만끽한다."},
-      2: {"title": "아는 사람이 없는 교양에서 팀프로젝트. 조원 어떻게 구하지?", "type":"EI", "A":"적극적으로 조원을 찾아본다.","B":"교수님이 조 짜주시기만 기다린다."},
-      3: {"title": "동아리 MT 갔을때 나의 모습은?", "type":"EI", "A":"MT의 꽃 술게임!! 다 드루와~~","B":"시끄러운건 싫어! 방에 숨에있는다"},
+      1: {"title1": "오늘 모처럼 쉬는날...", 
+          "title2": "뭐하지...?",
+          "type":"EI", "A":"집에 있으면 답답해~ 만날 사람을 찾아 떠난다.","B":"혼자만의 시간을 만끽한다."},
+      2: {"title1": "아는 사람이 없는 수업에서",
+          "title2": "조원 어떻게 구해?",
+          "type":"EI", "A":"적극적으로 조원을 찾아본다.","B":"교수님이 조 짜주시기만 기다린다."},
+      3: {"title1": "동아리 MT 갔을때",
+          "title2":"나의 모습은?",
+          "type":"EI", "A":"MT의 꽃 술게임!! 다 드루와~~","B":"시끄러운건 싫어! 방에 숨에있는다."},
       /* S/N 질문 3개 */
-      4: {"title": "코딩의 신이 됐다.... 하고 싶은 것은?", "type":"SN", "A":"구글 입사하기","B":"구글 해킹하기"},
-      5: {"title": "크러쉬가 나한테 멍때리기 대회 참여할건지 물어본다면?", "type":"SN", "A":"뭐야 시간아까워. 참가하지 않는다.","B":"상금이 얼마지? 일단 참가!"},
-      6: {"title": "영화 내용을 소개해 달라고 한다면?", "type":"SN", "A":"영화 줄거리를 애기해준다.","B":"감독의 의도를 중심으로 설명한다."},
+      4: {"title1": "코딩의 신이 됐다...!",
+          "title2": "하고 싶은 것은?",
+           "type":"SN", "A":"구글 입사하기.","B":"구글 해킹하기."},
+      5: {"title1": "친구가 나한테 멍때리기 대회",
+          "title2": "참여할건지 물어본다면?",
+          "type":"SN", "A":"뭐야 시간아까워. 참가하지 않는다.","B":"상금이 얼마지? 일단 참가!"},
+      6: {"title1": "썸남/썸녀가 영화 내용을",
+          "title2": "소개해 달라고 한다면?",
+          "type":"SN", "A":"영화 줄거리를 애기해준다.","B":"감독의 의도를 중심으로 설명한다."},
       /* J/P 질문 3개 */
-      7: {"title": "온라인 강의가 올라왔을 때 나의 모습", "type":"JP", "A":"올라오자마자 듣는다.","B":"마감 당일까지 미뤄둔다."},
-      8: {"title": "개인 메일함 정리해?", "type":"JP", "A":"당연하지! 그걸 어떻게 두고 봐?","B":"엥 개인 메일함을 정리해?"},
-      9: {"title": "오늘은 레포트 제출 d-day. 내 모습은?", "type":"JP", "A":"다 했으니 유튜브 보고 쉬어야지ㅎㅎ","B":"유튜브 하나만 보고 해야지ㅎㅎ"},
+      7: {"title1": "팀 프로젝트 초반 회의할때",
+          "title2": "내 의견은?",
+          "type":"JP", "A":"계획을 잡아야 자료조사를하지.","B":"자료조사부터 해봐야 계획을 잡지."},
+      8: {"title1": "정리가 하나도 안된 메일함보면",
+          "title2": "무슨 생각 들어?",
+          "type":"JP", "A":"안본 눈 삽니다.","B":"엥 그거 내껀데?"},
+      9: {"title1": "오늘은 레포트 제출 d-day.",
+          "title2": "내 모습은?",
+          "type":"JP", "A":"다 했으니 유튜브 보고 쉬어야지.ㅎㅎ","B":"유튜브 하나만 보고 해야지.ㅎㅎ"},
     }
     var result = {
       "ESJ": {"programming_language": "JavaScript", "explain": "하마 설명", "img":"lion.jpg"},
@@ -93,24 +135,20 @@
       "INJ": {"programming_language": "C++", "explain": "호랑이 설명", "img":"lion.jpg"},
       "INP": {"programming_language": "PHP", "explain": "호랑이 설명", "img":"lion.jpg"},
     }
-
     function start() {
       $(".start").hide();
       $(".question").show();
       next();
     }
-
     $("#A").click(function(){
       var type = $("#type").val();
       var preValue = $("#"+type).val();
       $("#"+type).val(parseInt(preValue)+1);
       next();
     });
-
     $("#B").click(function(){
       next();
     });
-
     function next(){
       if (num==10){ //마지막 문제
         $(".question").hide();
@@ -125,7 +163,8 @@
         $("#explain").html(result[mbti]["explain"]);
       } else {
         $(".progress-bar").attr('style','width: calc(100/9*'+num+'%)');
-        $("#title").html(q[num]["title"]);
+        $("#title1").html(q[num]["title1"]);
+        $("#title2").html(q[num]["title2"]);
         $("#type").val(q[num]["type"]);
         $("#A").html(q[num]["A"]);
         $("#B").html(q[num]["B"]);
@@ -134,4 +173,5 @@
     }
   </script>
 </body>
+
 </html>
