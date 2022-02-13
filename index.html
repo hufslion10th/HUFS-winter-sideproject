@@ -26,7 +26,13 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+  }
+  @font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
     body{
       padding: 0px;
@@ -61,12 +67,27 @@
       height: 1.7rem;
       background-color: transparent;
     } 
+    .btn3 {
+      float: left;
+      cursor: pointer;
+      width: 6rem;
+      height: 5.7rem;
+      background-color: transparent;
+    } 
     .btn4 {
       float: left;
       width: 32.6rem;
       height: 8.5rem;
       margin-left: 8.7rem;
       border-radius: 6rem;
+      background-color: transparent;
+    }
+    .btn5 {
+      float: left;
+      width: 21rem;
+      height: 5.5rem;
+      margin-left: 8.7rem;
+      border-radius: 5rem;
       background-color: transparent;
     }
   </style>
@@ -77,6 +98,8 @@
     <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 8.09rem;" onclick='start();'></button>
     <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 26.37rem;"></button>
     <button onclick="location.href='https://www.codelion.net/'" class="btn btn2" style="position: absolute; margin-top: 42.3rem; margin-left: 10.8rem;"></button>
+    <button onclick="location.href='https://www.hufs.ac.kr/'" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 27.8rem;"></button>
+    <button onclick="location.href='https://www.facebook.com/likelionhufs/'" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 35rem;"></button>
   </article>
 
   <article id="content" style="background-image: url(static/img/secondview.png); background-size: 100%, 100%;" class="question">
@@ -91,9 +114,12 @@
   </article>
 
   <article id="content" style="background-image: url(static/img/lastview.png); background-size: 100%, 100%;" class="result">
-    <img style="width: 9rem; height: auto; position: absolute; margin-top: 11.5rem; margin-left: 9.5rem;" src="static/img/JS-logo.png" alt="programming_language">
-    <h2 id="programming_language" style="position: absolute; margin-left: 30rem; margin-top: 10rem;"class="text-center">프로그래밍 언어</h2>
+    <img id="img" style="height: 10rem; width: auto; position: absolute; margin-top: 11rem; margin-left: 9.5rem;" src="static/img/JS-logo.png" alt="programming_language">
+    <h2 style="position: absolute; margin-left: 25rem; margin-top: 10rem; font-family: yg-jalnan;"class="text-center">나랑 닮은 언어는?</h2>
+    <h2 style="position: absolute; margin-left: 26.5rem; margin-top: 13.5rem;"class="text-center">➜</h2>
+    <h2 id="programming_language" style="position: absolute; margin-left: 29rem; margin-top: 13.5rem; font-family: yg-jalnan;"class="text-center">프로그래밍 언어</h2>
     <h3 id="explain" style="position: absolute; margin-left: 30rem; margin-top: 20rem;" class="text-center">설명</h3>
+    <button onclick="location.href='https://www.facebook.com/likelionhufs/'" class="btn btn5" style="position: absolute; margin-top: 40.3rem; margin-left: 20.4rem;"></button>
   </article>
   
   <input type="hidden" id="EI" value="0">
@@ -147,13 +173,13 @@
     }
     var result = {
       "ESJ": {"programming_language": "JavaScript", "explain": "하마 설명", "img":"static/img/JS-logo.png"},
-      "ESP": {"programming_language": "Python", "explain": "멋쟁이 사자 설명", "img":"lion.jpg"},
-      "ENJ": {"programming_language": "Java", "explain": "호랑이 설명", "img":"lion.jpg"},
-      "ENP": {"programming_language": "C#", "explain": "호랑이 설명", "img":"lion.jpg"},
-      "ISJ": {"programming_language": "Swift", "explain": "호랑이 설명", "img":"lion.jpg"},
-      "ISP": {"programming_language": "Go", "explain": "호랑이 설명", "img":"lion.jpg"},
-      "INJ": {"programming_language": "C++", "explain": "호랑이 설명", "img":"lion.jpg"},
-      "INP": {"programming_language": "PHP", "explain": "호랑이 설명", "img":"lion.jpg"},
+      "ESP": {"programming_language": "Python", "explain": "멋쟁이 사자 설명", "img":"static/img/python-logo.png"},
+      "ENJ": {"programming_language": "Java", "explain": "호랑이 설명", "img":"static/img/java-logo.png"},
+      "ENP": {"programming_language": "C#", "explain": "호랑이 설명", "img":"static/img/csh-logo.png"},
+      "ISJ": {"programming_language": "Swift", "explain": "호랑이 설명", "img":"static/img/swift-logo.png"},
+      "ISP": {"programming_language": "Go", "explain": "호랑이 설명", "img":"static/img/go-logo.png"},
+      "INJ": {"programming_language": "C++", "explain": "호랑이 설명", "img":"static/img/cpp-logo.png"},
+      "INP": {"programming_language": "PHP", "explain": "호랑이 설명", "img":"static/img/php-logo.png"},
     }
     function start() {
       $(".start").hide();
