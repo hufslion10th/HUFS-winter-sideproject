@@ -33,6 +33,12 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'Uiyeun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
   :root {
       font-size: 8px;
@@ -101,19 +107,56 @@
       width: 21rem;
       height: 5.5rem;
       margin-left: 8.7rem;
-      border-radius: 5rem;
+      border-radius: 2.5rem;
+    }
+    .btn6 {
+      float: left;
+      cursor: pointer;
+      width: 12.7rem;
+      height: 4.1rem;
+      border-radius: 2.5rem;
       background-color: transparent;
     }
+    .div2 {
+        border: none;
+        width: 8.5rem;
+        height: 8.8rem;
+    }
+    .clicked {
+        border: 1rem solid;
+        color: rgb(255, 94, 0);
+    }
+
   </style>
 </head>
 <body class="container" style="background-color:bisque;">
 
   <article id="content" style="background-image: url(static/img/firstview.png); background-size: 100%, 100%;" class="start">
     <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 8.09rem;" onclick='start();'></button>
-    <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 26.37rem;"></button>
-    <button onclick="location.href='https://www.codelion.net/'" class="btn btn2" style="position: absolute; margin-top: 42.3rem; margin-left: 10.8rem;"></button>
-    <button onclick="location.href='https://www.hufs.ac.kr/'" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 27.8rem;"></button>
-    <button onclick="location.href='https://www.facebook.com/likelionhufs/'" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 35rem;"></button>
+    <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 26.37rem;" onclick='about();'></button>
+    <button onclick="window.open('https://www.codelion.net/')" class="btn btn2" style="position: absolute; margin-top: 42.3rem; margin-left: 10.8rem;"></button>
+    <button onclick="window.open('https://www.hufs.ac.kr/')" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 27.8rem;"></button>
+    <button onclick="window.open('https://www.facebook.com/likelionhufs/')" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 35rem;"></button>
+  </article>
+
+  <article id="content" style="background-image: url(static/img/aboutview.png); background-size: 100%, 100%;" class="about">
+    <div class="div1">
+      <div class="div2" id="0" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 7.3rem;"></div>
+      <div class="div2" id="1" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 17.1rem;"></div>
+      <div class="div2" id="2" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 26.4rem;"></div>
+      <div class="div2" id="3" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 35.2rem;"></div>
+      <div class="div2" id="4" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 7.3rem;"></div>
+      <div class="div2" id="5" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 17.1rem;"></div>
+      <div class="div2" id="6" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 26.4rem;"></div>
+      <div class="div2" id="7" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 35.2rem;"></div>
+
+      <div style=" position:absolute; margin-top: 27.4rem; margin-left: 11rem; height: 20rem; width: 28rem;">
+        <h3 id="explain2" style="font-family: Uiyeun; font-size: 1.9rem;">설명</h3>
+      </div>
+
+      <button type="button" class="btn btn6" style="position: absolute; margin-top: 42rem; margin-left: 18.7rem;" onclick='back();'></button>
+
+    </div>
   </article>
 
   <article id="content" style="background-image: url(static/img/secondview.png); background-size: 100%, 100%;" class="question">
@@ -128,14 +171,14 @@
   </article>
 
   <article id="content" style="background-image: url(static/img/lastview.png); background-size: 100%, 100%;" class="result">
-    <img id="img" style="height: 10rem; width: auto; position: absolute; margin-top: 11rem; margin-left: 9.5rem;" src="static/img/JS-logo.png" alt="programming_language">
-    <h2 style="position: absolute; margin-left: 25rem; margin-top: 10rem; font-family: yg-jalnan;"class="text-center">나랑 닮은 언어는?</h2>
-    <h2 style="position: absolute; margin-left: 26.5rem; margin-top: 13.5rem;"class="text-center">➜</h2>
-    <h2 id="programming_language" style="position: absolute; margin-left: 29rem; margin-top: 13.5rem; font-family: yg-jalnan;"class="text-center">프로그래밍 언어</h2>
+    <img id="img" style="height: 10rem; width: auto; position: absolute; margin-top: 11rem; margin-left: 9.5rem; filter: drop-shadow(5px 5px 5px rgb(138, 138, 138));" src="static/img/JS-logo.png" alt="programming_language">
+    <h2 style="position: absolute; margin-left: 24rem; margin-top: 10rem; font-family: yg-jalnan;"class="text-center">잘 어울리는 코딩언어?</h2>
+    <h2 style="position: absolute; margin-left: 25.5rem; margin-top: 13.5rem;"class="text-center">➜</h2>
+    <h2 id="programming_language" style="position: absolute; margin-left: 28rem; margin-top: 13.5rem; font-family: yg-jalnan;"class="text-center">프로그래밍 언어</h2>
     <div style="position: absolute; width: 21rem; height:21rem; margin-top: 17rem; margin-left: 23rem;">
-      <h3 id="explain" style="margin-top: 1rem; margin-left: 1rem;">설명</h3>
+      <h3 id="explain" style="margin-top: 1rem; margin-left: 1rem; font-family: Uiyeun; font-size: 2.1rem;">설명</h3>
     </div>
-    <button onclick="location.href='https://www.facebook.com/likelionhufs/'" class="btn btn5" style="position: absolute; margin-top: 40.3rem; margin-left: 20.4rem;"></button>
+    <button onclick="window.open('https://docs.google.com/forms/d/1SwNYGLcf1iK7dl5bWMZda8UkKCS6NN9c2JFEya_RdQc/viewform?edit_requested=true')" class="btn btn5" style="position: absolute; margin-top: 40.3rem; margin-left: 20.4rem;"></button>
   </article>
   
   <input type="hidden" id="EI" value="0">
@@ -215,10 +258,29 @@
                 "img":"static/img/php-logo.png"},
 
     }
+    var explain2 = new Array(
+      "평소 에너지가 넘치는 당신에게 자바스크립트를 추천합니다! 매사에 에너지가 뿜뿜하는 자바스크립트 어떠신가요? 요즘 예쁜 웹페이지에 자바스크립트가 빠지지가 않죠. 자바스크립트 없이 화려한 웹페이지는 탄생할 수 없답니다!",
+      "“Life is short, you need Python” 지름길을 찾고 싶지만 실용성도 놓칠 수 없는 당신에게 멋진 사자 같은 파이썬을 추천합니다! 파이썬만큼 코딩의 지름길을 찾아주는 언어가 없죠. 파이썬으로 못하는 것은 거의 없을 정도 랍니다~",
+      "어떤 일이든 철저하게 모든 일을 끝마치는 당신에게 자바를 추천합니다. 자바를 통해 무언가를 만들 때는 철저한 설계가 필요해요. 자바의 설계도를 작성하다 보면 재미를 느낄 수 있지 않을까요?",
+      "평소 실행력이 좋고 무엇이든 재미를 추구하는 당신에게 C#을 추천합니다.  C#으로 만들 수 있는 것은 게임입니다. C#은 동작 속도가 빨라 게임을 만드는 언어로 많이 사용되고 있어요. C#을 배워서 재미있는 작품을 만들어보면 어떨까요?",
+      "현실주의적이면서 실용적인 것을 좋아하는 당신에게 스위프트를 추천합니다. 스위프트로 ios환경에서 성능 좋은 앱을 만들어낼 수 있어요. Airbnb나 LinkedIn이 스위프트로 만들어진 대표적인 서비스랍니다. 스위프트를 통해 유익한 앱을 만들어 보는걸 추천합니다.",
+      "무엇이든 효율적이고 간결한 것이 최고! 복잡한건 딱 질색인 당신에게 잘 어울리는 언어는 Go입니다. Go는 복잡하지 않고 간결한 문법으로 코드를 짤 수 있어요. 고민없는 너구리가 되고 싶은 당신에게 Go를 추천합니다!",
+      "매사에 욕심이 많은 당신에게 개발계의 만능 언어 C++을 추천합니다. 무엇이든 이해하고 보려는 당신의 성향은 컴퓨터를 이해하는데 아주 큰 도움이 될 것입니다. C++은 무려 운영 체제를 개발 할 수 있는 언어인데요, 이참에 컴퓨터 운영 체제로 여행을 떠나보시는 건 어떨까요?",
+      "눈에 띄지는 않지만 묵묵히 자신의 마음이 이끄는 대로 살아가는 당신에게 php를 추천합니다. 많은 웹사이트에서 여전히 Php 언어를 사용하고 있어요. 꾸준히 사랑받는 언어 php에 대해서 알아보는 것은 어떠신지요?"
+    )   
+
     function start() {
       $(".start").hide();
       $(".question").show();
       next();
+    }
+    function about() {
+      $(".start").hide();
+      $(".about").show();
+    }
+    function back() {
+      $(".start").show();
+      $(".about").hide();
     }
     $("#A").click(function(){
       var type = $("#type").val();
@@ -237,12 +299,10 @@
         ($("#EI").val() <2) ? mbti+="I" : mbti+="E";
         ($("#SN").val() <2) ? mbti+="N" : mbti+="S";
         ($("#JP").val() <2) ? mbti+="P" : mbti+="J";
-        alert(mbti);
         $("#img").attr("src",result[mbti]["img"]);
         $("#programming_language").html(result[mbti]["programming_language"]);
         $("#explain").html(result[mbti]["explain"]);
       } else {
-        $(".progress-bar").attr('style','width: calc(100/9*'+num+'%)');
         $("#title1").html(q[num]["title1"]);
         $("#title2").html(q[num]["title2"]);
         $("#page").html(q[num]["page"]);
@@ -252,6 +312,41 @@
         num++;
       }
     }
+  </script>
+
+  <script>
+    var div2 = document.getElementsByClassName("div2");
+    div2[0].classList.add("clicked")
+    function handleClick(event) {
+      console.log(event.target);
+      console.log(event.target.classList);
+
+      if (event.target.classList[1] === "clicked") {
+        event.target.classList.remove("clicked");
+      }
+      else {
+        for (var i = 0; i < div2.length; i++) {
+          div2[i].classList.remove("clicked");
+        }
+        event.target.classList.add("clicked");
+        console.log(event.target)
+      }
+    }
+
+    function init() {
+      for (var i = 0; i < div2.length; i++) {
+        div2[i].addEventListener("click", handleClick);
+      }
+    }
+    
+    $("#explain2").html(explain2[0]);
+
+    function reply_click(clicked_id)
+    {
+      $("#explain2").html(explain2[clicked_id]);
+    }
+
+    init();
   </script>
 </body>
 
