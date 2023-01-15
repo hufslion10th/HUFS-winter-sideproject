@@ -6,179 +6,68 @@
   <title>나에게 맞는 코딩 언어는?</title>
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./static/css/font.css">
+  <link rel="stylesheet" href="./static/css/mediaquery.css">
 
-  <style>
-    @font-face {
-    font-family: 'HSSaemaul-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSSaemaul-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    }
-    @font-face {
-    font-family: 'MaplestoryOTFLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    }
-    @font-face {
-    font-family: 'ghanachoco';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'yg-jalnan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Uiyeun';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105@1.1/Uiyeun.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  :root {
-      font-size: 8px;
-  }
-  @media (min-width: 800px) {
-    :root {
-      font-size: 12px;
-    }
-  }
-  @media (min-width: 1200px) {
-    :root {
-      font-size: 16px;
-    }
-  }
-
-    body{
-      padding: 0px;
-      margin: 0px;
-    }
-
-    #content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 50rem;
-      height: 50rem;
-      margin: -25rem 0rem 0rem -25rem;
-    }
-
-    .btn:focus, .btn:active {
-      outline: none;
-      box-shadow: none;
-    }
-    .btn1 {
-      float: left;
-      cursor: pointer;
-      width: 15.51rem;
-      height: 4.96rem;
-      border-radius: 2.5rem;
-      background-color: transparent;
-    }
-    .btn2 {
-      float: left;
-      cursor: pointer;
-      width: 13.2rem;
-      height: 1.7rem;
-      background-color: transparent;
-    } 
-    .btn3 {
-      float: left;
-      cursor: pointer;
-      width: 6rem;
-      height: 5.7rem;
-      background-color: transparent;
-    } 
-    .btn4 {
-      float: left;
-      width: 32.6rem;
-      height: 8.5rem;
-      margin-left: 8.7rem;
-      border-radius: 6rem;
-      background-color: transparent;
-    }
-    .btn5 {
-      float: left;
-      width: 21rem;
-      height: 5.5rem;
-      margin-left: 8.7rem;
-      border-radius: 2.5rem;
-    }
-    .btn6 {
-      float: left;
-      cursor: pointer;
-      width: 12.7rem;
-      height: 4.1rem;
-      border-radius: 2.5rem;
-      background-color: transparent;
-    }
-    .div2 {
-        border: none;
-        width: 8.5rem;
-        height: 8.8rem;
-    }
-    .clicked {
-        border: 1rem solid;
-        color: rgb(255, 94, 0);
-    }
-
-  </style>
+  <link rel="stylesheet" href="./static/css/main.css">
+  <link rel="stylesheet" href="./static/css/index.css">
 </head>
-<body class="container" style="background-color:bisque;">
 
-  <article id="content" style="background-image: url(static/img/firstview.png); background-size: 100%, 100%;" class="start">
-    <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 8.09rem;" onclick='start();'></button>
-    <button type="button" class="btn btn1" style="position: absolute; margin-top: 32.73rem; margin-left: 26.37rem;" onclick='about();'></button>
-    <button onclick="window.open('https://www.codelion.net/')" class="btn btn2" style="position: absolute; margin-top: 42.3rem; margin-left: 10.8rem;"></button>
-    <button onclick="window.open('https://www.hufs.ac.kr/')" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 27.8rem;"></button>
-    <button onclick="window.open('https://www.facebook.com/likelionhufs/')" class="btn btn3" style="position: absolute; margin-top: 39.5rem; margin-left: 35rem;"></button>
+<body class="container">
+
+  <article id="content" class="start" style="background-image: url(static/img/firstview.png);">
+    <button type="button" class="btn btn1 btn-po1" onclick='start();'></button>
+    <button type="button" class="btn btn1 btn-po2" onclick='about();'></button>
+    <button class="btn btn2 btn-po3" onclick="window.open('https://www.codelion.net/')"></button>
+    <button class="btn btn3 btn-po4" onclick="window.open('https://www.hufs.ac.kr/')"></button>
+    <button class="btn btn3 btn-po5" onclick="window.open('https://www.facebook.com/likelionhufs/')"></button>
   </article>
+  
 
-  <article id="content" style="background-image: url(static/img/aboutview.png); background-size: 100%, 100%;" class="about">
+  <article id="content" class="about" style="background-image: url(static/img/aboutview.png);">
     <div class="div1">
-      <div class="div2" id="0" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 7.3rem;"></div>
-      <div class="div2" id="1" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 17.1rem;"></div>
-      <div class="div2" id="2" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 26.4rem;"></div>
-      <div class="div2" id="3" onClick="reply_click(this.id)" style="position: absolute; margin-top: 6.7rem; margin-left: 35.2rem;"></div>
-      <div class="div2" id="4" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 7.3rem;"></div>
-      <div class="div2" id="5" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 17.1rem;"></div>
-      <div class="div2" id="6" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 26.4rem;"></div>
-      <div class="div2" id="7" onClick="reply_click(this.id)" style="position: absolute; margin-top: 15.2rem; margin-left: 35.2rem;"></div>
+      <div id="0" class="div2 div2-pos0" onClick="reply_click(this.id)"></div>
+      <div id="1" class="div2 div2-pos1" onClick="reply_click(this.id)"></div>
+      <div id="2" class="div2 div2-pos2" onClick="reply_click(this.id)"></div>
+      <div id="3" class="div2 div2-pos3" onClick="reply_click(this.id)"></div>
+      <div id="4" class="div2 div2-pos4" onClick="reply_click(this.id)"></div>
+      <div id="5" class="div2 div2-pos5" onClick="reply_click(this.id)"></div>
+      <div id="6" class="div2 div2-pos6" onClick="reply_click(this.id)"></div>
+      <div id="7" class="div2 div2-pos7" onClick="reply_click(this.id)"></div>
 
-      <div style=" position:absolute; margin-top: 27.4rem; margin-left: 11rem; height: 20rem; width: 28rem;">
-        <h3 id="explain2" style="font-family: Uiyeun; font-size: 1.9rem;">설명</h3>
+      <div class="explain2">
+        <h3 id="explain2">설명</h3>
       </div>
 
-      <button type="button" class="btn btn6" style="position: absolute; margin-top: 42rem; margin-left: 18.7rem;" onclick='back();'></button>
+      <button type="button" class="btn btn6 btn-po6" onclick='back();'></button>
 
     </div>
   </article>
 
-  <article id="content" style="background-image: url(static/img/secondview.png); background-size: 100%, 100%;" class="question">
-    <h2 id="title1" class="text-center" style="margin-top: 9rem; font-family: HSSaemaul-Regular; font-size:4rem; color: rgb(17,28,67);">Title1</h2>
-    <h2 id="title2" class="text-center" style="font-family: HSSaemaul-Regular; font-size:4rem; color: rgb(17,28,67);">Title2</h2>
+  <article id="content" class="question" style="background-image: url(static/img/secondview.png);">
+    <h2 id="title1" class="text-center text-1" >Title1</h2>
+    <h2 id="title2" class="text-center text-2">Title2</h2>
+
     <input id="type" type="hidden" value="EI">
     
-    <button id="A" type="button" class="btn btn4" style="margin-top: 2.7rem; font-family: MaplestoryOTFLight; font-size:1.4rem; color: rgb(0, 0, 0);">Primary</button>
-    <button id="B" type="button" class="btn btn4" style="margin-top: 1rem; font-family: MaplestoryOTFLight; font-size:1.4rem; color: rgb(0, 0, 0);">Primary</button>
+    <button id="A" type="button" class="btn btn4 btn-A">Primary</button>
+    <button id="B" type="button" class="btn btn4 btn-B">Primary</button>
     
-    <h2 id="page" class="text-center" style="margin-top: 2rem; font-family: ghanachoco; font-size:3rem; color: rgb(17,28,67);">1/9</h2>
+    <h2 id="page" class="text-center text-3">1/9</h2>
   </article>
 
-  <article id="content" style="background-image: url(static/img/lastview.png); background-size: 100%, 100%;" class="result">
-    <img id="img" style="height: 10rem; width: auto; position: absolute; margin-top: 11rem; margin-left: 9.5rem; filter: drop-shadow(5px 5px 5px rgb(138, 138, 138));" src="static/img/JS-logo.png" alt="programming_language">
-    <h2 style="position: absolute; margin-left: 24rem; margin-top: 10rem; font-family: yg-jalnan;"class="text-center">잘 어울리는 코딩언어?</h2>
-    <h2 style="position: absolute; margin-left: 25.5rem; margin-top: 13.5rem;"class="text-center">➜</h2>
-    <h2 id="programming_language" style="position: absolute; margin-left: 28rem; margin-top: 13.5rem; font-family: yg-jalnan;"class="text-center">프로그래밍 언어</h2>
-    <div style="position: absolute; width: 21rem; height:21rem; margin-top: 17rem; margin-left: 23rem;">
-      <h3 id="explain" style="margin-top: 1rem; margin-left: 1rem; font-family: Uiyeun; font-size: 2.1rem;">설명</h3>
+  <article id="content" class="result" style="background-image: url(static/img/lastview.png);">
+    <img id="img" class="img1" src="static/img/JS-logo.png" alt="programming_language">
+    
+    <h2 class="text-center text-4">잘 어울리는 코딩언어?</h2>
+    <h2 class="text-center text-5">➜</h2>
+    <h2 id="programming_language" class="text-center text-6">프로그래밍 언어</h2>
+    
+    <div class="explain">
+      <h3 id="explain">설명</h3>
     </div>
-    <button onclick="window.open('https://docs.google.com/forms/d/1SwNYGLcf1iK7dl5bWMZda8UkKCS6NN9c2JFEya_RdQc/viewform?edit_requested=true')" class="btn btn5" style="position: absolute; margin-top: 40.3rem; margin-left: 20.4rem;"></button>
+    
+    <button class="btn btn5 btn-po7" onclick="window.open('https://docs.google.com/forms/d/1SwNYGLcf1iK7dl5bWMZda8UkKCS6NN9c2JFEya_RdQc/viewform?edit_requested=true')"></button>
   </article>
   
   <input type="hidden" id="EI" value="0">
@@ -187,167 +76,11 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script>
-    var num = 1;
-    var q = {
-      /* E/I 질문 3개 */
-      1: {"title1": "오늘 모처럼 쉬는날...", 
-          "title2": "뭐하지...?",
-          "type":"EI", "A":"집은 답답해! 만날 사람을 찾아 떠난다.","B":"혼자만의 시간을 만끽한다.",
-          "page": "1/9"},
-      2: {"title1": "아는 사람이 없는 수업에서",
-          "title2": "조원 어떻게 구해?",
-          "type":"EI", "A":"적극적으로 조원을 찾아본다.","B":"교수님이 조 짜주시기만 기다린다.",
-          "page": "2/9"},
-      3: {"title1": "동아리 MT 갔을때",
-          "title2":"나의 모습은?",
-          "type":"EI", "A":"MT의 꽃 술게임!! 다 드루와~~","B":"시끄러운건 싫어! 방에 숨에있는다.",
-          "page": "3/9"},
-      /* S/N 질문 3개 */
-      4: {"title1": "코딩의 신이 됐다...!",
-          "title2": "하고 싶은 것은?",
-          "type":"SN", "A":"구글 입사하기.","B":"구글 해킹하기.",
-          "page": "4/9"},
-      5: {"title1": "친구가 나한테 멍때리기 대회",
-          "title2": "참여할건지 물어본다면?",
-          "type":"SN", "A":"뭐야 시간아까워. 참가하지 않는다.","B":"상금이 얼마지? 일단 참가!",
-          "page": "5/9"},
-      6: {"title1": "썸남/썸녀가 영화 내용을",
-          "title2": "소개해 달라고 한다면?",
-          "type":"SN", "A":"영화 줄거리를 애기해준다.","B":"감독의 의도를 중심으로 설명한다.",
-          "page": "6/9"},
-      /* J/P 질문 3개 */
-      7: {"title1": "팀 프로젝트 초반 회의할때",
-          "title2": "내 의견은?",
-          "type":"JP", "A":"계획을 잡아야 자료조사를하지.","B":"자료조사부터 해봐야 계획을 잡지.",
-          "page": "7/9"},
-      8: {"title1": "정리가 하나도 안된 메일함보면",
-          "title2": "무슨 생각 들어?",
-          "type":"JP", "A":"안본 눈 삽니다.","B":"엥 그거 내껀데?",
-          "page": "8/9"},
-      9: {"title1": "오늘은 레포트 제출 d-day.",
-          "title2": "내 모습은?",
-          "type":"JP", "A":"다 했으니 유튜브 보고 쉬어야지.ㅎㅎ","B":"유튜브 하나만 보고 해야지.ㅎㅎ",
-          "page": "9/9"},
-    }
-    var result = {
+  
+  <script src = "static/js/index.js"></script>
+  <script src = "static/js/scripts.js"></script>
+  <script src = "static/js/scripts_functions.js"></script>
 
-      "ESJ": {"programming_language": "JavaScript",
-                "explain": "평소 에너지가 넘치는 당신에게 자바스크립트를 추천합니다! 매사에 에너지가 뿜뿜하는 자바스크립트 어떠신가요? 요즘 예쁜 웹페이지에 자바스크립트가 빠지지가 않죠. 자바스크립트 없이 화려한 웹페이지는 탄생할 수 없답니다!",
-                "img":"static/img/JS-logo.png"},
-      "ESP": {"programming_language": "Python",
-                "explain": "“Life is short, you need Python” 지름길을 찾고 싶지만 실용성도 놓칠 수 없는 당신에게 멋진 사자 같은 파이썬을 추천합니다! 파이썬만큼 코딩의 지름길을 찾아주는 언어가 없죠. 파이썬으로 못하는 것은 거의 없을 정도 랍니다~",
-                "img":"static/img/python-logo.png"},
-      "ENJ": {"programming_language": "Java",
-                "explain": "어떤 일이든 철저하게 모든 일을 끝마치는 당신에게 자바를 추천합니다. 자바를 통해 무언가를 만들 때는 철저한 설계가 필요해요. 자바의 설계도를 작성하다 보면 재미를 느낄 수 있지 않을까요?",
-                "img":"static/img/java-logo.png"},
-      "ENP": {"programming_language": "C#",
-                "explain": "평소 실행력이 좋고 무엇이든 재미를 추구하는 당신에게 C#을 추천합니다.  C#으로 만들 수 있는 것은 게임입니다. C#은 동작 속도가 빨라 게임을 만드는 언어로 많이 사용되고 있어요. C#을 배워서 재미있는 작품을 만들어보면 어떨까요?",
-                "img":"static/img/csh-logo.png"},
-      "ISJ": {"programming_language": "Swift",
-                "explain": "현실주의적이면서 실용적인 것을 좋아하는 당신에게 스위프트를 추천합니다. 스위프트로 ios환경에서 성능 좋은 앱을 만들어낼 수 있어요. Airbnb나 LinkedIn이 스위프트로 만들어진 대표적인 서비스랍니다. 스위프트를 통해 유익한 앱을 만들어 보는걸 추천합니다.",
-                "img":"static/img/swift-logo.png"},
-      "ISP": {"programming_language": "Go",
-                "explain": "무엇이든 효율적이고 간결한 것이 최고! 복잡한건 딱 질색인 당신에게 잘 어울리는 언어는 Go입니다. Go는 복잡하지 않고 간결한 문법으로 코드를 짤 수 있어요. 고민없는 너구리가 되고 싶은 당신에게 Go를 추천합니다!",
-                "img":"static/img/go-logo.png"},
-      "INJ": {"programming_language": "C++",
-                "explain": "매사에 욕심이 많은 당신에게 개발계의 만능 언어 C++을 추천합니다. 무엇이든 이해하고 보려는 당신의 성향은 컴퓨터를 이해하는데 아주 큰 도움이 될 것입니다. C++은 무려 운영 체제를 개발 할 수 있는 언어인데요, 이참에 컴퓨터 운영 체제로 여행을 떠나보시는 건 어떨까요?",
-                "img":"static/img/cpp-logo.png"},
-      "INP": {"programming_language": "PHP",
-                "explain": "눈에 띄지는 않지만 묵묵히 자신의 마음이 이끄는 대로 살아가는 당신에게 php를 추천합니다. 많은 웹사이트에서 여전히 Php 언어를 사용하고 있어요. 꾸준히 사랑받는 언어 php에 대해서 알아보는 것은 어떠신지요?",
-                "img":"static/img/php-logo.png"},
-
-    }
-    var explain2 = new Array(
-      "평소 에너지가 넘치는 당신에게 자바스크립트를 추천합니다! 매사에 에너지가 뿜뿜하는 자바스크립트 어떠신가요? 요즘 예쁜 웹페이지에 자바스크립트가 빠지지가 않죠. 자바스크립트 없이 화려한 웹페이지는 탄생할 수 없답니다!",
-      "“Life is short, you need Python” 지름길을 찾고 싶지만 실용성도 놓칠 수 없는 당신에게 멋진 사자 같은 파이썬을 추천합니다! 파이썬만큼 코딩의 지름길을 찾아주는 언어가 없죠. 파이썬으로 못하는 것은 거의 없을 정도 랍니다~",
-      "어떤 일이든 철저하게 모든 일을 끝마치는 당신에게 자바를 추천합니다. 자바를 통해 무언가를 만들 때는 철저한 설계가 필요해요. 자바의 설계도를 작성하다 보면 재미를 느낄 수 있지 않을까요?",
-      "평소 실행력이 좋고 무엇이든 재미를 추구하는 당신에게 C#을 추천합니다.  C#으로 만들 수 있는 것은 게임입니다. C#은 동작 속도가 빨라 게임을 만드는 언어로 많이 사용되고 있어요. C#을 배워서 재미있는 작품을 만들어보면 어떨까요?",
-      "현실주의적이면서 실용적인 것을 좋아하는 당신에게 스위프트를 추천합니다. 스위프트로 ios환경에서 성능 좋은 앱을 만들어낼 수 있어요. Airbnb나 LinkedIn이 스위프트로 만들어진 대표적인 서비스랍니다. 스위프트를 통해 유익한 앱을 만들어 보는걸 추천합니다.",
-      "무엇이든 효율적이고 간결한 것이 최고! 복잡한건 딱 질색인 당신에게 잘 어울리는 언어는 Go입니다. Go는 복잡하지 않고 간결한 문법으로 코드를 짤 수 있어요. 고민없는 너구리가 되고 싶은 당신에게 Go를 추천합니다!",
-      "매사에 욕심이 많은 당신에게 개발계의 만능 언어 C++을 추천합니다. 무엇이든 이해하고 보려는 당신의 성향은 컴퓨터를 이해하는데 아주 큰 도움이 될 것입니다. C++은 무려 운영 체제를 개발 할 수 있는 언어인데요, 이참에 컴퓨터 운영 체제로 여행을 떠나보시는 건 어떨까요?",
-      "눈에 띄지는 않지만 묵묵히 자신의 마음이 이끄는 대로 살아가는 당신에게 php를 추천합니다. 많은 웹사이트에서 여전히 Php 언어를 사용하고 있어요. 꾸준히 사랑받는 언어 php에 대해서 알아보는 것은 어떠신지요?"
-    )   
-
-    function start() {
-      $(".start").hide();
-      $(".question").show();
-      next();
-    }
-    function about() {
-      $(".start").hide();
-      $(".about").show();
-    }
-    function back() {
-      $(".start").show();
-      $(".about").hide();
-    }
-    $("#A").click(function(){
-      var type = $("#type").val();
-      var preValue = $("#"+type).val();
-      $("#"+type).val(parseInt(preValue)+1);
-      next();
-    });
-    $("#B").click(function(){
-      next();
-    });
-    function next(){
-      if (num==10){ //마지막 문제
-        $(".question").hide();
-        $(".result").show();
-        var mbti = "";
-        ($("#EI").val() <2) ? mbti+="I" : mbti+="E";
-        ($("#SN").val() <2) ? mbti+="N" : mbti+="S";
-        ($("#JP").val() <2) ? mbti+="P" : mbti+="J";
-        $("#img").attr("src",result[mbti]["img"]);
-        $("#programming_language").html(result[mbti]["programming_language"]);
-        $("#explain").html(result[mbti]["explain"]);
-      } else {
-        $("#title1").html(q[num]["title1"]);
-        $("#title2").html(q[num]["title2"]);
-        $("#page").html(q[num]["page"]);
-        $("#type").val(q[num]["type"]);
-        $("#A").html(q[num]["A"]);
-        $("#B").html(q[num]["B"]);
-        num++;
-      }
-    }
-  </script>
-
-  <script>
-    var div2 = document.getElementsByClassName("div2");
-    div2[0].classList.add("clicked")
-    function handleClick(event) {
-      console.log(event.target);
-      console.log(event.target.classList);
-
-      if (event.target.classList[1] === "clicked") {
-        event.target.classList.remove("clicked");
-      }
-      else {
-        for (var i = 0; i < div2.length; i++) {
-          div2[i].classList.remove("clicked");
-        }
-        event.target.classList.add("clicked");
-        console.log(event.target)
-      }
-    }
-
-    function init() {
-      for (var i = 0; i < div2.length; i++) {
-        div2[i].addEventListener("click", handleClick);
-      }
-    }
-    
-    $("#explain2").html(explain2[0]);
-
-    function reply_click(clicked_id)
-    {
-      $("#explain2").html(explain2[clicked_id]);
-    }
-
-    init();
-  </script>
 </body>
 
 </html>
