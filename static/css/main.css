@@ -1,0 +1,110 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+.start{
+  background-size: 100%, 100%;
+}
+
+.about {
+  display: none;
+  background-size: 100%, 100%;
+}
+
+.div2 {
+  border: none;
+  width: 8.5rem;
+  height: 8.8rem;
+}
+
+.question {
+  display: none;
+  background-size: 100%, 100%;
+}
+
+.result {
+  display: none;
+  background-size: 100%, 100%;
+}
+
+.btn:focus, .btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn1 {
+  float: left;
+  cursor: pointer;
+  width: 15.51rem;
+  height: 4.96rem;
+  border-radius: 2.5rem;
+  background-color: transparent;
+}
+
+.btn2 {
+  float: left;
+  cursor: pointer;
+  width: 13.2rem;
+  height: 1.7rem;
+  background-color: transparent;
+} 
+
+.btn3 {
+  float: left;
+  cursor: pointer;
+  width: 6rem;
+  height: 5.7rem;
+  background-color: transparent;
+} 
+
+.btn4 {
+  float: left;
+  width: 32.6rem;
+  height: 8.5rem;
+  margin-left: 8.7rem;
+  border-radius: 6rem;
+  background-color: transparent;
+}
+
+.btn5 {
+  float: left;
+  width: 21rem;
+  height: 5.5rem;
+  margin-left: 8.7rem;
+  border-radius: 2.5rem;
+}
+
+.btn6 {
+  float: left;
+  cursor: pointer;
+  width: 12.7rem;
+  height: 4.1rem;
+  border-radius: 2.5rem;
+  background-color: transparent;
+}
+
+.clicked {
+  border: 1rem solid;
+  color: rgb(255, 94, 0);
+}
+
+#img {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50rem;
+  height: 50rem;
+  margin: -25rem 0rem 0rem -25rem;
+}

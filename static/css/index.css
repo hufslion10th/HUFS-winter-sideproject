@@ -1,0 +1,184 @@
+.container {
+    background-color:bisque;
+}
+
+.btn-po1{
+    position: absolute;
+    margin-top: 32.73rem;
+    margin-left: 8.09rem;
+}
+
+.btn-po2{
+    position: absolute;
+    margin-top: 32.73rem;
+    margin-left: 26.37rem;
+}
+
+.btn-po3{
+    position: absolute;
+    margin-top: 42.3rem;
+    margin-left: 10.8rem;
+}
+
+.btn-po4{
+    position: absolute;
+    margin-top: 39.5rem;
+    margin-left: 27.8rem;
+}
+
+.btn-po5{
+    position: absolute;
+    margin-top: 39.5rem;
+    margin-left: 35rem;
+}
+
+.btn-po6{
+    position: absolute;
+    margin-top: 42rem;
+    margin-left: 18.7rem;
+}
+
+.btn-po7{
+    position: absolute;
+    margin-top: 40.3rem;
+    margin-left: 20.4rem;
+}
+
+.div2-pos0{
+    position: absolute;
+    margin-top: 6.7rem;
+    margin-left: 7.3rem;
+}
+
+.div2-pos1{
+    position: absolute;
+    margin-top: 6.7rem;
+    margin-left: 17.1rem;
+}
+
+.div2-pos2{
+    position: absolute;
+    margin-top: 6.7rem;
+    margin-left: 26.4rem;
+}
+
+.div2-pos3{
+    position: absolute;
+    margin-top: 6.7rem;
+    margin-left: 35.2rem;
+}
+
+.div2-pos4{
+    position: absolute;
+    margin-top: 15.2rem;
+    margin-left: 7.3rem;
+}
+
+.div2-pos5{
+    position: absolute;
+    margin-top: 15.2rem;
+    margin-left: 17.1rem;
+}
+
+.div2-pos6{
+    position: absolute;
+    margin-top: 15.2rem;
+    margin-left: 26.4rem;
+}
+
+.div2-pos7{
+    position: absolute;
+    margin-top: 15.2rem;
+    margin-left: 35.2rem;
+}
+
+.explain{
+    position: absolute;
+    margin-top: 17rem;
+    margin-left: 23rem;
+    width: 21rem;
+    height:21rem;
+}
+
+.explain2{
+    position:absolute;
+    margin-top: 27.4rem;
+    margin-left: 11rem;
+    height: 20rem;
+    width: 28rem;
+}
+
+#explain{
+    font-family: Uiyeun;
+    font-size: 2.1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+#explain2{
+    font-family: Uiyeun;
+    font-size: 1.9rem;
+}
+
+.text-1{
+    font-family: HSSaemaul-Regular;
+    font-size:4rem;
+    color: rgb(17,28,67);
+    margin-top: 9rem;
+}
+
+.text-2{
+    font-family: HSSaemaul-Regular;
+    font-size:4rem;
+    color: rgb(17,28,67);
+}
+
+.text-3{
+    font-family: ghanachoco;
+    font-size:3rem;
+    color: rgb(17,28,67);
+    margin-top: 2rem;
+}
+
+.text-4{
+    font-family: yg-jalnan;
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 24rem;
+}
+
+.text-5{
+    position: absolute;
+    margin-top: 13.5rem;
+    margin-left: 25.5rem;
+}
+
+.text-6{
+    font-family: yg-jalnan;
+    position: absolute;
+    margin-top: 13.5rem;
+    margin-left: 28rem;
+}
+
+.btn-A{
+    font-family: MaplestoryOTFLight;
+    font-size:1.4rem;
+    color: rgb(0, 0, 0);
+    margin-top: 2.7rem;
+}
+
+.btn-B{
+    font-family: MaplestoryOTFLight;
+    font-size:1.4rem;
+    color: rgb(0, 0, 0);
+    margin-top: 1rem;
+}
+
+#img{
+    position: absolute;
+    margin-top: 11rem;
+    margin-left: 9.5rem;
+    height: 10rem;
+    width: auto;
+    filter: drop-shadow(5px 5px 5px rgb(138, 138, 138));
+}
